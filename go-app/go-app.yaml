@@ -7,9 +7,9 @@ metadata:
     app: go-app
   annotations:
     prometheus.io/scrape: "true"
-    prometheus.io/port: "80"
+    prometheus.io/port: "9000"
     prometheus.io/path: "/metrics"
 spec:
   containers:
   - name: go-app
-    image: kessix/go-app
+    image: kessis01/go-app

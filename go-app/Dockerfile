@@ -34,7 +34,7 @@ COPY --from=builder /app/go-app .
 COPY --from=builder /app/static ./static
 
 # Expor a porta da aplicação
-EXPOSE 8080
+EXPOSE 9000
 
 # Comando para rodar a aplicação
 CMD ["./go-app"]
