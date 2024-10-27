@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-app
+  namespace: dev
+  labels:
+    app: go-app
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "80"
+    prometheus.io/path: "/metrics"
+spec:
+  containers:
+  - name: go-app
+    image: kessix/go-app

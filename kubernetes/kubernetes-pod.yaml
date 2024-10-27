@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-monitoring-demo
+  namespace: demo
+  labels:
+    app: prometheus-demo
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "80"
+    prometheus.io/path: "/metrics"
+spec:
+  containers:
+  - name: pushgateway
+    image: prom/pushgateway
